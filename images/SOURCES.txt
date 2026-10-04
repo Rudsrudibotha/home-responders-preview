@@ -1,8 +1,8 @@
 Image credits, Home Responders LLC
 ==================================
 
-All photos and artwork are by Home Responders LLC (from our own
-Nextdoor business page). House numbers and licence plates are blurred.
+All photos and artwork: Home Responders LLC (their Nextdoor business
+page). House numbers, licence plates and street signs are blurred.
 
 - images/hero-holiday-roofline.jpg .. Roofline holiday lighting at night
 - images/holiday-lights-snow.jpg .... Holiday lighting on a snowy evening (cropped)
@@ -28,7 +28,7 @@ Nextdoor business page). House numbers and licence plates are blurred.
 - images/root-removal.jpg ........... Root removal
 - images/garden-beds.jpg ............ Fresh garden beds
 - images/gutter-roofline.jpg ........ Gutter work
-- images/og-image.jpg ............... Social sharing image made from our roofline lighting photo
+- images/og-image.jpg ............... Social sharing image (roofline lighting photo)
 
 Icons: hand-drawn inline SVG.
 Fonts: Bricolage Grotesque and Figtree via Google Fonts (SIL Open Font License).

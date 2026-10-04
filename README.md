@@ -6,7 +6,7 @@ Single-page marketing site for Home Responders LLC, a home and lawn services bus
 - `index.html`: holiday-lighting hero, lighting section, services, hauling band, photo gallery of our work, Neighborhood Favorite award and a neighbor review, free-quote form, mobile text/call bar
 - `styles.css`: brand stylesheet (navy and red from the logo, warm gold from our roofline lighting)
 - `script.js`: mobile menu (Escape closes), gallery “see all”, and the quote form, which composes an email or a text with the details filled in
-- `images/`: optimised JPGs (house numbers and licence plates blurred)
+- `images/`: optimised JPGs (house numbers, licence plates and street signs blurred)
 - `SOURCES.txt`: image credits
 
 ## Contact details used
