@@ -92,7 +92,7 @@
         var body = 'Hi Home Responders team, I\u2019d like a free quote for ' + d.service.toLowerCase() + ' in ' + d.area + '. ' +
           (d.msg ? d.msg + ' ' : '') + '\u2014 ' + d.name + (d.email ? ', ' + d.email : '') + (d.phone ? ', ' + d.phone : '');
         status.textContent = 'Opening your messages app\u2026';
-        window.location.href = 'sms:' + PHONE + '?body=' + encodeURIComponent(body);
+        window.location.href = 'sms:' + PHONE + '?&body=' + encodeURIComponent(body);
       });
     }
   }
