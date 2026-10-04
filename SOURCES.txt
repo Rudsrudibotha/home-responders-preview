@@ -7,6 +7,9 @@ page). House numbers, licence plates and street signs are blurred.
 - images/hero-holiday-roofline.jpg .. Roofline holiday lighting at night
 - images/holiday-lights-snow.jpg .... Holiday lighting on a snowy evening (cropped)
 - images/logo.jpg ................... The Home Responders logo
+- images/logo-mark.jpg .............. The Home Responders logo (mascot crop)
+- images/favicon-64.png ............. The Home Responders logo (mascot crop)
+- apple-touch-icon.png ............... The Home Responders logo (mascot crop)
 - images/furniture-haul.jpg ......... Trailer loaded with furniture
 - images/gravel-path.jpg ............ Gravel path
 - images/leaf-cleanup.jpg ........... Leaf cleanup

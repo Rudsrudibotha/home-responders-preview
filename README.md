@@ -1,11 +1,12 @@
 # Home Responders LLC: website
 
-Single-page marketing site for Home Responders LLC, a home and lawn services business serving Richmond & Henrico, VA: holiday and permanent lighting, gutters, yard cleanup, mulch and gravel, junk hauling, estate clean-outs, heavy lifting and furniture moving, and snow and storm cleanup.
+Single-page marketing site for Home Responders LLC, a home and lawn services business serving Richmond & Henrico, VA: holiday and permanent lighting, gutters, yard cleanup, mulch and gravel, junk hauling, house clean-outs, heavy lifting and furniture moving, and snow and storm cleanup.
 
 ## Structure
 - `index.html`: holiday-lighting hero, lighting section, services, hauling band, photo gallery of our work, Neighborhood Favorite award and a neighbor review, free-quote form, mobile text/call bar
 - `styles.css`: brand stylesheet (navy and red from the logo, warm gold from our roofline lighting)
 - `script.js`: mobile menu (Escape closes), gallery “see all”, and the quote form, which composes an email or a text with the details filled in
+- `apple-touch-icon.png`, `images/favicon-64.png`, `images/logo-mark.jpg`: crops of their mascot logo
 - `images/`: optimised JPGs (house numbers, licence plates and street signs blurred)
 - `SOURCES.txt`: image credits
 

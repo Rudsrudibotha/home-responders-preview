@@ -65,21 +65,30 @@
     }
     return { name: name, phone: phone, email: email, service: v('f-service'), area: v('f-area'), msg: v('f-msg') };
   }
+  // Natural wording for each Area and Service option
+  function place(area) { return area === 'Nearby' ? 'near Richmond and Henrico' : 'in ' + area; }
+  function areaLabel(area) { return area === 'Nearby' ? 'Near Richmond and Henrico' : area; }
+  function job(service) {
+    if (service === 'Something else') return '';
+    return ' for ' + (service === 'House clean-out' ? 'a house clean-out' : service.toLowerCase());
+  }
+  function sentence(t) { return /[.!?\u2026)]$/.test(t) ? t : t + '.'; }
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var d = collect();
       if (!d) return;
-      var subject = 'Free quote request: ' + d.service + ' (' + d.area + ')';
+      var subject = 'Free quote request' + (d.service === 'Something else' ? ' ' : ': ' + d.service + ' ') + place(d.area);
       var body = [
         'Hi Home Responders team,', '',
-        'I\u2019d like a free quote.', '',
+        'I\u2019d like a free quote' + job(d.service) + ' ' + place(d.area) + '.', '',
         'Name: ' + d.name,
         'Phone: ' + (d.phone || '-'),
         'Email: ' + (d.email || '-'),
         'Service: ' + d.service,
-        'Area: ' + d.area, '',
-        'About the job:', (d.msg || '-')
+        'Area: ' + areaLabel(d.area), '',
+        'About the job:', (d.msg || '-'), '',
+        'Thanks,', d.name
       ].join('\n');
       status.textContent = 'Opening your email app\u2026';
       window.location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
@@ -89,8 +98,12 @@
       textBtn.addEventListener('click', function () {
         var d = collect(true);
         if (!d) return;
-        var body = 'Hi Home Responders team, I\u2019d like a free quote for ' + d.service.toLowerCase() + ' in ' + d.area + '. ' +
-          (d.msg ? d.msg + ' ' : '') + '\u2014 ' + d.name + (d.email ? ', ' + d.email : '') + (d.phone ? ', ' + d.phone : '');
+        var parts = ['Hi Home Responders team, I\u2019d like a free quote' + job(d.service) + ' ' + place(d.area) + '.'];
+        if (d.msg) parts.push(sentence(d.msg));
+        parts.push(sentence('This is ' + d.name));
+        if (d.email) parts.push('My email is ' + d.email + '.');
+        if (d.phone) parts.push('My number is ' + d.phone + '.');
+        var body = parts.join(' ');
         status.textContent = 'Opening your messages app\u2026';
         window.location.href = 'sms:' + PHONE + '?&body=' + encodeURIComponent(body);
       });
